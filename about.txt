@@ -1,0 +1,73 @@
+// This is an example file how everything should be done.
+// The idea is to make a crowler which grabs the structure of calls and store it to the files.
+
+/*
+	I have to create the logic of such crowler.
+
+	1) This program has to be console.
+	2) It should follow all "call" and "goto" instructions and go back
+		on "return" or other instructions.
+
+	3) Check all conditional transitions like "btfss" and "btfsc" and others to
+		follow the flow and building the structure of it.
+
+	4) To trace multiple goto for state machines.
+
+
+*/
+
+The chanes of calls could be represented as list of vertexes.
+
+(1,2,3)
+(2,4,5)
+(3,6,7)
+
+Where the first index is the linear part of code, second index is the branch where to go
+if the conditional variable is cleared, and the third index the part of code where to go 
+if the conditional variable is set.
+	
+
+For some cases it could be more than 2 goto instructions.
+
+Transition commands:
+1) call
+2) lcall
+3) goto
+
+Return commands:
+1) return
+2) retlw
+3) retfie 	
+
+Name of procedures and labels where to go should be in the first line.
+
+Commands of branching
+
++1) btfss
++2) btfsc
+-3) btfsz -- not used
++4) tstfsz
++5) decfsz
++6) dcfsnz
++7) incfsz  -- used in the loops
++8) cpfsgt
++9) cpfslt
++10)cpfseq
++11)infsnz
+
+For the beginning its enought to use only 
+
+call, lcall, goto;
+return, retlw, retfie;
+btfsc, btfss;
+
+First parce will create the list of all possible labels and separate list of all
+calls.
+
+The second parse will create the interconnection between functions.
+
+Possibly the third pass will be needed to convert it to methalanguage format.
+
+
+
+
