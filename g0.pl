@@ -25,6 +25,21 @@ for (@line) {
         # Check if LOOP is not empty. I have to find {} and make sure that 
         # space between them is empty. If it's not empty - make sure that that
         # parences are balanced and copy the content inside {} to variable.
+
+        #Check if we have '{' in the line with LOOP
+        if ($_ =~ "{") 
+        {
+        	#Ok, open block.
+        	print "Start of LOOP found.\n";
+        	#Count the number of opening parensis 
+
+        	#...
+
+        } 
+        else
+        {
+        	print "No beginning of block in LOOP line has found.\n"; 
+        } 
     }
 }
 
