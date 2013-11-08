@@ -1,0 +1,7 @@
+7.11.2013
+---------
+
+1) Write a perl function which replace interrupts.
+1.0) Write a function which is copy one file to another.
+=1.1) Find the string which contains "#pragma"
+2) Write a function which do the same but take the stings form config file.
